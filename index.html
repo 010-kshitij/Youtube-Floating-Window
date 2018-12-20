@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>YouTube Float</title>
+		<meta name="viewport" content="width=device-width;" />
+	
+		<style>
+			body {
+				background: #000000;
+				color: #ffffff;
+			}
+			.toolbar {
+				text-align: right;
+				position: absolute;
+				right: 0;
+				visibility: hidden;
+				z-index: 9999;
+				width: 100%;
+			}
+			body:hover .toolbar, .toolbar:hover {
+				visibility: visible;
+			}
+			.toolbar .action-button {
+				border: 1px solid #ffffff;
+				padding: 10px 20px;
+				color: #ffffff;
+				font-size: 20px;
+				font-weight: 900;
+				background: transparent;
+				cursor: pointer;
+			}
+			iframe {
+				width: 100%;
+				height: 100%;
+				z-index: 1; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="toolbar">
+			<button style="-webkit-app-region: drag;" class="action-button" title="Move Window"><strong>+</strong></button>
+			<button class="action-button" title="Minimize"><strong>_</strong></button>
+			<button class="action-button" title="Close"><strong>X</strong></button>
+		</div>
+		<iframe 
+			width="560" 
+			height="315" 
+			src="https://www.youtube.com/embed/Z6HMvpqV9Dg" 
+			frameborder="0" 
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen>
+		</iframe>
+	</body>		
+</html>

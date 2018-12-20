@@ -1,0 +1,14 @@
+{
+  "name": "youtubefloat",
+  "version": "1.0.0",
+  "description": "Watch Youtube Videos on a floating window",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kshitij Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.13"
+  }
+}
