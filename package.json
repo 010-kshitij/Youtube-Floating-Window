@@ -1,5 +1,6 @@
 {
   "name": "youtubefloat",
+  "productName": "YouTube Floating Window",
   "version": "1.0.0",
   "description": "Watch Youtube Videos on a floating window",
   "main": "app.js",
@@ -9,6 +10,10 @@
   "author": "Kshitij Sharma",
   "license": "ISC",
   "dependencies": {
-    "electron": "^3.0.13"
+    "electron": "^3.0.13",
+    "electron-prompt": "^1.3.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^13.0.1"
   }
 }

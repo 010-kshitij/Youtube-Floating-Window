@@ -3,52 +3,79 @@
 	<head>
 		<title>YouTube Float</title>
 		<meta name="viewport" content="width=device-width;" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+		<script>
+			var videoURL = "https://www.youtube.com/embed/Z6HMvpqV9Dg";
+		</script>
 	
 		<style>
 			body {
 				background: #000000;
 				color: #ffffff;
 			}
-			.toolbar {
-				text-align: right;
-				position: absolute;
-				right: 0;
-				visibility: hidden;
-				z-index: 9999;
-				width: 100%;
+			.options-area {
+				height: 35px;
 			}
-			body:hover .toolbar, .toolbar:hover {
-				visibility: visible;
-			}
-			.toolbar .action-button {
-				border: 1px solid #ffffff;
-				padding: 10px 20px;
-				color: #ffffff;
-				font-size: 20px;
-				font-weight: 900;
-				background: transparent;
-				cursor: pointer;
-			}
-			iframe {
+			.options-area button {
+				background: #000000;
+				color: #ffffff47;
+				border: none;
 				width: 100%;
 				height: 100%;
-				z-index: 1; 
+			}
+			.options-area button:hover {
+				color: #ffffff;
+				cursor: pointer;
+			}
+			
+			.video-area iframe {
+				width: 100%;
+				height: 100%;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="toolbar">
-			<button style="-webkit-app-region: drag;" class="action-button" title="Move Window"><strong>+</strong></button>
-			<button class="action-button" title="Minimize"><strong>_</strong></button>
-			<button class="action-button" title="Close"><strong>X</strong></button>
+		<div class="container-fluid">
+			<div class="row options-area">
+				<div class="col">
+					<button style="-webkit-app-region: drag;" class="action-button" title="Move Window">
+						<i class="fa fa-arrows" aria-hidden="true"></i>
+					</button>
+				</div>
+				<div class="col">
+					<button class="action-button" id="set-video-button" title="Enter YouTube Video URL">
+						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+					</button>
+				</div>
+				<div class="col">
+					<button class="action-button" id="minimize-button" title="Minimize">
+						<i class="fa fa-window-minimize" aria-hidden="true"></i>
+					</button>
+				</div>
+				<div class="col">
+					<button class="action-button" id="close-button" title="Close">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
+				</div>
+			</div>
+			<div class="row video-area">
+				<div class="col">
+					<iframe 
+						id="video-iframe"
+						width="560" 
+						height="315" 
+						src="" 
+						alt="Add any video to watch here" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</div>
 		</div>
-		<iframe 
-			width="560" 
-			height="315" 
-			src="https://www.youtube.com/embed/Z6HMvpqV9Dg" 
-			frameborder="0" 
-			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-			allowfullscreen>
-		</iframe>
+
+		<script src="handlers.js"></script>
 	</body>		
 </html>
