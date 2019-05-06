@@ -7,8 +7,8 @@ let win;
 function createWindow() {
 	win = new BrowserWindow({
 		frame: false, 
-		width: 320, 
-		height: 205
+		width: 800, 
+		height: 450,
 	}); 
 	win.loadURL(url.format({
 		pathname: path.join(__dirname, 'index.html'),
