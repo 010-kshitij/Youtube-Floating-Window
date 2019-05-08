@@ -14,9 +14,13 @@
 			body {
 				background: #000000;
 				color: #ffffff;
+				overflow: hidden;
 			}
 			.options-area {
-				height: 35px;
+				position: relative;
+				height: 30px;
+				z-index: 100;
+				top:20px
 			}
 			.options-area button {
 				background: #000000;
@@ -28,16 +32,19 @@
 			.options-area button:hover {
 				color: #ffffff;
 				cursor: pointer;
+				transition: opacity 0.4s ease;
+				opacity: 1;
 			}
 			
-			.video-area iframe {
-				width: 100%;
-				height: 100%;
+			 iframe {
+				overflow: hidden;
+	height: 100vh;
+	width: 100vw;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="container-fluid">
+		
 			<div class="row options-area">
 				<div class="col">
 					<button style="-webkit-app-region: drag;" class="action-button" title="Move Window">
@@ -60,19 +67,16 @@
 					</button>
 				</div>
 			</div>
-			<div class="row video-area">
-				<div class="col">
-					<iframe 
-						id="video-iframe"
-						width="560" 
-						height="315" 
-						src="" 
-						alt="Add any video to watch here" 
-						frameborder="0" 
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-						allowfullscreen>
-					</iframe>
-				</div>
+		<div class="row">
+			<div class="col">
+				<iframe 
+					id="video-iframe"
+					src="" 
+					alt="Add any video to watch here" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
 			</div>
 		</div>
 
